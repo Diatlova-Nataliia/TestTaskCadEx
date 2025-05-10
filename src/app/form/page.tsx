@@ -46,17 +46,21 @@ export default function FormPage() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const submittedData = new FormData(e.currentTarget);
+    let response: Response;
+
     try {
-      let response = await fetch("/api/submit", {
+      response = await fetch("/api/submit", {
         method: "POST",
         body: submittedData,
       });
-      const data = await response.json();
-      console.log(data);
-      setMessage(data.message);
     } catch (error) {
       console.error("Error submitting form:", error);
+
+      return;
     }
+
+    const data = await response.json();
+    setMessage(data.message);
   }
 
   return (

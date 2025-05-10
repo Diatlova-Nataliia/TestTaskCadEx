@@ -10,7 +10,6 @@ interface InfoTitle {
   textFontSize?: string;
   textColor?: string;
   titlePadding?: string;
-  boxPadding?: string;
 }
 
 const InfoTitle: React.FC<InfoTitle> = ({
@@ -21,7 +20,6 @@ const InfoTitle: React.FC<InfoTitle> = ({
   textFontSize,
   textColor,
   titlePadding,
-  boxPadding,
 }) => {
   return (
     <>

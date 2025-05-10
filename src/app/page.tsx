@@ -114,7 +114,6 @@ export default function Home() {
             {Array.from({ length: 6 }, (_, index) => (
               <InfoTitle
                 titlePadding="10px"
-                boxPadding="100px"
                 textColor="#757575"
                 titleFontSize="1.5rem"
                 textFontSize="1rem"
