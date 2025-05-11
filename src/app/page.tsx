@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import { Typography } from "@mui/material";
-import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import Video from "@/components/Video";
 import { Box } from "@mui/system";
@@ -8,24 +7,18 @@ import theme from "../../theme";
 import InfoTitle from "@/components/InfoTitle";
 import { StyledButton } from "@/components/StyledButton";
 import Footer from "@/components/Footer";
+import Container from "@/components/Container";
 
 export default function Home() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Box
-          component="div"
-          sx={{
-            margin: "0 auto",
-            maxWidth: {
-              lg: "1200px",
-            },
-          }}
-        >
-          <Header href="/form">Some Company</Header>
+        <Container color="primary" as="header">
+          <Header />
+        </Container>
+        <Container color="secondary" as="section">
           <Box
-            component="section"
+            component="div"
             sx={{
               display: {
                 lg: "flex",
@@ -33,9 +26,8 @@ export default function Home() {
                 sm: "block",
                 xs: "block",
               },
-              backgroundColor: "#F5F5F5",
               padding: "26px 33px 88px 46px",
-              borderTop: "1px solid #D9D9D9",
+              gap: "120px",
             }}
           >
             <Box
@@ -74,9 +66,8 @@ export default function Home() {
                 justifyContent: "flex-end",
                 width: "100%",
                 maxWidth: "530px",
-                aspectRatio: "530 / 235",
+                aspectRatio: "16 / 9",
                 overflow: "hidden",
-                paddingLeft: "clamp(0, 10vw, 173px)",
               }}
             >
               <Video
@@ -86,18 +77,19 @@ export default function Home() {
               ></Video>
             </Box>
           </Box>
-          <Box component="section" textAlign="center">
-            <Typography
-              variant="h2"
-              sx={{
-                padding: "clamp(12px, 4vw, 100px)",
-                fontSize: "3rem",
-                fontWeight: "bold",
-              }}
-            >
-              Also very important title
-            </Typography>
-          </Box>
+        </Container>
+        <Container color="primary" as="section">
+          <Typography
+            variant="h2"
+            sx={{
+              padding: "clamp(12px, 4vw, 100px)",
+              fontSize: "3rem",
+              fontWeight: "bold",
+              textAlign: "center",
+            }}
+          >
+            Also very important title
+          </Typography>
           <Box
             component="section"
             sx={{
@@ -124,6 +116,7 @@ export default function Home() {
               />
             ))}
           </Box>
+
           <Box
             component="div"
             sx={{
@@ -134,12 +127,13 @@ export default function Home() {
           >
             <StyledButton href="/form">Contact Us</StyledButton>
           </Box>
+        </Container>
+        <Container color="secondary" as="section">
           <Box
             component="footer"
             sx={{
               display: "flex",
               backgroundColor: "#F5F5F5",
-              borderBottom: "1px solid #D9D9D9",
               flexDirection: "column",
               alignItems: "center",
               padding: "77px 0 67px 0",
@@ -156,8 +150,10 @@ export default function Home() {
             </Typography>
             <StyledButton href="/form">Contact Us</StyledButton>
           </Box>
+        </Container>
+        <Container color="primary" as="section">
           <Footer />
-        </Box>
+        </Container>
       </ThemeProvider>
     </>
   );

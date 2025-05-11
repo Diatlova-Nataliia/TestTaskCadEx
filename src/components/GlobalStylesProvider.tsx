@@ -1,0 +1,9 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStylesProvider = createGlobalStyle`
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #2c2c2c;
+    color: #000;
+    margin: 0;
+}`;

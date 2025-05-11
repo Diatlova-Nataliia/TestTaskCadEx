@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
-import GlobalStylesProvider from "@/app/GlobalStylesProvider";
+import StyledComponentsRegistry from "../../lib/registry";
+import { GlobalStylesProvider } from "@/components/GlobalStylesProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>{/*<GlobalStylesProvider></GlobalStylesProvider>*/}</head>
       <body>
-        <GlobalStylesProvider />
-        {children}
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );

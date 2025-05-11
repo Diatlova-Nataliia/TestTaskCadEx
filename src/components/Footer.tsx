@@ -1,6 +1,12 @@
+"use client";
 import { Box } from "@mui/system";
 import React from "react";
-import { Copyright } from "@/components/Copyright";
+import styled from "styled-components";
+
+const StyledCopyright = styled.p`
+  font-size: 1.3rem;
+  font-weight: bold;
+`;
 
 const Footer = () => {
   return (
@@ -13,7 +19,7 @@ const Footer = () => {
           padding: "84px 0",
         }}
       >
-        <Copyright>Some Company 2024</Copyright>
+        <StyledCopyright>Some Company 2024</StyledCopyright>
       </Box>
     </>
   );

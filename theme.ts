@@ -3,10 +3,10 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "times-new-roman",
-    h1: { fontFamily: "times-new-roman" },
-    h2: { fontFamily: "times-new-roman" },
-    body1: { fontFamily: "times-new-roman" },
+    fontFamily: "Times New Roman",
+    h1: { fontFamily: "Times New Roman" },
+    h2: { fontFamily: "Times New Roman" },
+    body1: { fontFamily: "Times New Roman" },
   },
   breakpoints: {
     values: {
@@ -15,6 +15,14 @@ const theme = createTheme({
       md: 900,
       lg: 1200,
       xl: 1536,
+    },
+  },
+  palette: {
+    primary: {
+      main: "#ffffff",
+    },
+    secondary: {
+      main: "#f5f5f5",
     },
   },
 });

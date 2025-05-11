@@ -1,26 +1,30 @@
 "use client";
 import React from "react";
-import { styled } from "../../stitches.config";
 import { StyledButton } from "@/components/StyledButton";
-import { Copyright } from "@/components/Copyright";
+import styled from "styled-components";
 
 interface HeaderProps {
   href?: string;
 }
 
-const StyledHeader = styled("header", {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  padding: "16px",
-  margin: "0",
-});
+const StyledHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin: 0;
+`;
 
-const Header = ({ href, children }: React.PropsWithChildren<HeaderProps>) => {
+const StyledCompanyName = styled.p`
+  font-size: 1.3rem;
+  font-weight: bold;
+`;
+
+const Header: React.FC<HeaderProps> = () => {
   return (
     <StyledHeader>
-      <Copyright>{children}</Copyright>
-      <StyledButton component="a" href={href} variant="contained">
+      <StyledCompanyName>Some Company</StyledCompanyName>
+      <StyledButton component="a" href="/form" variant="contained">
         Contact us
       </StyledButton>
     </StyledHeader>

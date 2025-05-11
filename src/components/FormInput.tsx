@@ -17,20 +17,18 @@ const FormInput: React.FC<FormInputProps> = ({
   field,
   labelPadding,
 }) => {
-  const isTextarea = field.type === "textarea";
-
   return (
     <>
       <Box component="div" paddingBottom={labelPadding}>
         <label htmlFor={name}>{field.label}</label>
       </Box>
       <StyledInput
-        as={isTextarea ? "textarea" : "input"}
-        inputType={isTextarea ? "textarea" : "input"}
+        as={field.type === "textarea" ? "textarea" : "input"}
+        fieldType={field.type}
         placeholder={field.placeholder}
         name={name}
         id={name}
-        type={!isTextarea ? field.type : undefined}
+        type={field.type === "text" ? "text" : undefined}
         onChange={onChange}
         required
       />

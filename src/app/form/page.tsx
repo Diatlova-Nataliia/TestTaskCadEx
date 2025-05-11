@@ -1,6 +1,5 @@
 "use client";
 import theme from "../../../theme";
-import CssBaseline from "@mui/material/CssBaseline";
 import Header from "@/components/Header";
 import { Box } from "@mui/system";
 import { ThemeProvider } from "@mui/material/styles";
@@ -66,7 +65,6 @@ export default function FormPage() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
         <Box
           component="div"
           sx={{
@@ -76,7 +74,7 @@ export default function FormPage() {
             },
           }}
         >
-          <Header href="/form">Some Company</Header>
+          <Header />
 
           {message ? (
             <Box
@@ -87,8 +85,7 @@ export default function FormPage() {
                 alignItems: "center",
                 flexDirection: "column",
                 backgroundColor: "#F5F5F5",
-                border: "2px solid #D9D9D9",
-                borderStyle: "solid none",
+
                 padding: "160px 0",
               }}
             >
@@ -118,7 +115,7 @@ export default function FormPage() {
                 alignItems: "center",
                 flexDirection: "column",
                 backgroundColor: "#F5F5F5",
-                borderTop: "2px solid #D9D9D9",
+
                 padding: "clamp(12px, 8vw, 160px)",
               }}
             >
