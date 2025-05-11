@@ -2,24 +2,22 @@ import { Typography } from "@mui/material";
 import React from "react";
 import { Box } from "@mui/system";
 
-interface InfoTitle {
+interface CardProps {
   title: string;
   text: string;
   fontWeight?: string;
   titleFontSize?: string;
   textFontSize?: string;
   textColor?: string;
-  titlePadding?: string;
 }
 
-const InfoTitle: React.FC<InfoTitle> = ({
+const Card: React.FC<CardProps> = ({
   title,
   text,
   fontWeight,
   titleFontSize,
   textFontSize,
   textColor,
-  titlePadding,
 }) => {
   return (
     <>
@@ -33,7 +31,7 @@ const InfoTitle: React.FC<InfoTitle> = ({
           variant="subtitle1"
           fontWeight={fontWeight}
           fontSize={titleFontSize}
-          padding={titlePadding}
+          marginBottom={1}
         >
           {title}
         </Typography>
@@ -45,4 +43,4 @@ const InfoTitle: React.FC<InfoTitle> = ({
   );
 };
 
-export default InfoTitle;
+export default Card;

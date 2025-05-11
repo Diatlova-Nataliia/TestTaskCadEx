@@ -10,11 +10,11 @@ const theme = createTheme({
   },
   breakpoints: {
     values: {
-      xs: 300,
-      sm: 800,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
+      xs: 320,
+      sm: 768,
+      md: 1024,
+      lg: 1440,
+      xl: 1920,
     },
   },
   palette: {

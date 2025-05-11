@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import React from "react";
+import { ThemeProvider } from "@mui/material/styles";
 import StyledComponentsRegistry from "../../lib/registry";
-import { GlobalStylesProvider } from "@/components/GlobalStylesProvider";
+
+import "./global.css";
+import theme from "../../theme";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,9 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>{/*<GlobalStylesProvider></GlobalStylesProvider>*/}</head>
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <ThemeProvider theme={theme}>
+          <StyledComponentsRegistry>
+            <Header></Header>
+            {children}
+            <Footer></Footer>
+          </StyledComponentsRegistry>
+        </ThemeProvider>
       </body>
     </html>
   );

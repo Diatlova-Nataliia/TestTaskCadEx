@@ -8,6 +8,7 @@ import React from "react";
 import Footer from "@/components/Footer";
 import AdditionalFooter from "@/components/AdditionalFooter";
 import Form, { FormFieldData, FormField } from "@/components/Form";
+import Container from "@/components/Container";
 
 const CONTACT_US_SCHEMA = [
   { name: "name", label: "Name", type: "text", placeholder: "Value" },
@@ -63,94 +64,87 @@ export default function FormPage() {
   }
 
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Box
-          component="div"
-          sx={{
-            margin: "0 auto",
-            maxWidth: {
-              lg: "1200px",
-            },
-          }}
-        >
-          <Header />
+    <Container color="secondary" as="section">
+      <Box
+        component="div"
+        sx={{
+          margin: "0 auto",
+          maxWidth: {
+            lg: "1200px",
+          },
+        }}
+      >
+        {message ? (
+          <Box
+            component="div"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
 
-          {message ? (
+              padding: "160px 0",
+            }}
+          >
+            <Typography
+              component="h1"
+              sx={{
+                fontWeight: "bold",
+                fontSize: {
+                  lg: "4.5rem",
+                  xs: "3rem",
+                },
+                wordBreak: "break-word",
+                width: "100%",
+                maxWidth: "580px",
+                textAlign: "center",
+              }}
+            >
+              {message}
+            </Typography>
+          </Box>
+        ) : (
+          <Box
+            component="div"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              backgroundColor: "#F5F5F5",
+
+              padding: "clamp(12px, 8vw, 160px)",
+            }}
+          >
+            <Typography
+              component="h1"
+              sx={{
+                fontWeight: "bold",
+                fontSize: "3rem",
+                paddingBottom: "34px",
+                textAlign: "center",
+              }}
+            >
+              Only CTA on the page
+            </Typography>
             <Box
               component="div"
               sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: "column",
-                backgroundColor: "#F5F5F5",
-
-                padding: "160px 0",
+                padding: "24px",
+                border: "1px solid #D9D9D9",
+                borderRadius: "8px",
               }}
             >
-              <Typography
-                component="h1"
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: {
-                    lg: "4.5rem",
-                    xs: "3rem",
-                  },
-                  wordBreak: "break-word",
-                  width: "100%",
-                  maxWidth: "580px",
-                  textAlign: "center",
-                }}
-              >
-                {message}
-              </Typography>
+              <Form
+                onSubmit={handleSubmit}
+                onChange={handleChange}
+                formSchema={CONTACT_US_SCHEMA}
+                data={formData}
+              />
             </Box>
-          ) : (
-            <Box
-              component="div"
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: "column",
-                backgroundColor: "#F5F5F5",
-
-                padding: "clamp(12px, 8vw, 160px)",
-              }}
-            >
-              <Typography
-                component="h1"
-                sx={{
-                  fontWeight: "bold",
-                  fontSize: "3rem",
-                  paddingBottom: "34px",
-                  textAlign: "center",
-                }}
-              >
-                Only CTA on the page
-              </Typography>
-              <Box
-                component="div"
-                sx={{
-                  padding: "24px",
-                  border: "1px solid #D9D9D9",
-                  borderRadius: "8px",
-                }}
-              >
-                <Form
-                  onSubmit={handleSubmit}
-                  onChange={handleChange}
-                  formSchema={CONTACT_US_SCHEMA}
-                  data={formData}
-                />
-              </Box>
-            </Box>
-          )}
-          <Footer />
-          <AdditionalFooter />
-        </Box>
-      </ThemeProvider>
-    </>
+          </Box>
+        )}
+      </Box>
+    </Container>
   );
 }

@@ -10,4 +10,6 @@ export const StyledButton = muiStyled(Button)<ButtonProps>(() => ({
   textTransform: "capitalize",
   backgroundColor: "#000",
   color: "#fff",
+  height: "40px",
+  whiteSpace: "nowrap",
 }));
