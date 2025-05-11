@@ -1,10 +1,10 @@
 import { Typography } from "@mui/material";
-import Video from "@/components/Video";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import { Box } from "@mui/system";
 import Card from "@/components/CardProps";
-import { StyledButton } from "@/components/StyledButton";
 import Container from "@/components/Container";
 import { ContactUsButton } from "@/components/ContactUsButton";
+import Video from "@/components/Video";
 
 export default function Home() {
   return (
@@ -62,7 +62,7 @@ export default function Home() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
+              alignItems: "stretch",
               justifyContent: "flex-end",
               width: "100%",
               maxWidth: "530px",
@@ -71,9 +71,8 @@ export default function Home() {
             }}
           >
             <Video
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              width="100%"
-              height="100%"
+              id="dQw4w9WgXcQ"
+              title="Rick Astley - Never Gonna Give You Up (Official Music Video)"
             ></Video>
           </Box>
         </Box>

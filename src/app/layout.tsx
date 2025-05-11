@@ -3,6 +3,7 @@ import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import StyledComponentsRegistry from "../../lib/registry";
 
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import "./global.css";
 import theme from "../../theme";
 import Header from "@/components/Header";
