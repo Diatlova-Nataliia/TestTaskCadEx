@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Description
+
+This is a test task for Frontend Engineer role in CAD Exchanger
+https://download.cadexchanger.com/documents/hiring/frontend/CADEX+frontend+developer+assigment+for+probationeers.pdf
+
+Implemented using Next.js, MUI and Styled components.
+
+Next.js was chosen because the tasks required backend and deployment.
+
+MUI was chosen because it looks somewhat cool and I wanted to try it out.
+
+For CSS-in-JS library I was initially using Stitches, because wanted to check it out, but due to bad SSR support, migrated to styled components. The problem was jumping on initial render because styles were not embedded into the generated HTML.
+
+Overall I tried to use good Typescript, improve loading speeds, remove content shift on initial render, use media queries to achieve acceptable levels of responsiveness and tick as many other boxes from the task description.
+
+However, I didn't try to add super fancy styling due to bad taste in design. I believe that designing job should be done by designers.
 
 ## Getting Started
 
-First, run the development server:
+Development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+
+Production build:
+
+```bash
+npm run build
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+https://main.d21uxun1hn1y66.amplifyapp.com/
 
-## Learn More
+Deployed to AWS Amplify using their out-of-the-box support for Next.js apps hosted on GitHub.
 
-To learn more about Next.js, take a look at the following resources:
+Redeployment happens automatically each time new code is pushed to `main` branch
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Additional CSS technique used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Added a moving animated border color to input fields in focused state.
 
-## Deploy on Vercel
+## About usage of ChatGPT in this project:
+Some parts of the project were written using ChatGPT:
+1. SEOHelper and metadata insertion code
+2. The animated border described above
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Youtube video optimizations:
+Used one of the most popular libraries for insertion of youtube videos as react components found in NPM. The criteria of the decision was number of stars on GitHub and React support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## CSS-in-JS library selection
+Initially I was using Stitches, but due to bad SSR support, migrated to styled components. The problem was jumping on initial render because styles were not embedded into the generated HTML.
