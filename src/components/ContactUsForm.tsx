@@ -79,7 +79,7 @@ export default function ContactUsForm() {
               alignItems: "center",
               flexDirection: "column",
 
-              padding: "160px 0",
+              padding: "20px 0",
             }}
           >
             <Typography
@@ -129,6 +129,8 @@ export default function ContactUsForm() {
                 padding: "24px",
                 border: "1px solid #D9D9D9",
                 borderRadius: "8px",
+                width: "666px",
+                maxWidth: "100%",
               }}
             >
               <Form

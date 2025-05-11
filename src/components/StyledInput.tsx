@@ -25,7 +25,6 @@ export const StyledInput = styled.textarea<StyledInputProps>`
   font-size: 20px;
   border-radius: 6px;
   font-family: inherit;
-  max-width: 270px;
   height: ${({ fieldType = "text" }) => INPUT_HEIGHTS[fieldType]};
 
   &:focus,
