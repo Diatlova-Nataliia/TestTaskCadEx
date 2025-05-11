@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const ContactUsButton = () => {
   return (
-    <StyledButton component={Link} href="/form" variant="contained">
+    <StyledButton component={Link} href="/contact-us" variant="contained">
       Contact us
     </StyledButton>
   );

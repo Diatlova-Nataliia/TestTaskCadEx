@@ -1,14 +1,10 @@
 "use client";
-import theme from "../../../theme";
-import Header from "@/components/Header";
 import { Box } from "@mui/system";
-import { ThemeProvider } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 import React from "react";
-import Footer from "@/components/Footer";
-import AdditionalFooter from "@/components/AdditionalFooter";
-import Form, { FormFieldData, FormField } from "@/components/Form";
+import Form, { FormField, FormFieldData } from "@/components/Form";
 import Container from "@/components/Container";
+import SEO from "@/components/SEO";
 
 const CONTACT_US_SCHEMA = [
   { name: "name", label: "Name", type: "text", placeholder: "Value" },
@@ -54,7 +50,7 @@ export default function FormPage() {
         body: submittedData,
       });
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error submitting contact-us:", error);
 
       return;
     }
@@ -65,6 +61,12 @@ export default function FormPage() {
 
   return (
     <Container color="secondary" as="section">
+      <SEO
+        title="Contact us"
+        description="You are adopted"
+        url="/contact-us"
+        image="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+      ></SEO>
       <Box
         component="div"
         sx={{

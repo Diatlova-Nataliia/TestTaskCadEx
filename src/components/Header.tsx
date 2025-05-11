@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { StyledButton } from "@/components/StyledButton";
 import styled from "styled-components";
 import Container from "@/components/Container";
 import { ContactUsButton } from "@/components/ContactUsButton";
@@ -10,7 +9,7 @@ interface HeaderProps {
   href?: string;
 }
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
