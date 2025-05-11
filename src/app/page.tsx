@@ -4,17 +4,20 @@ import Card from "@/components/CardProps";
 import Container from "@/components/Container";
 import { ContactUsButton } from "@/components/ContactUsButton";
 import Video from "@/components/Video";
-import SEO from "@/components/SEO";
+import { SeoHelper } from "@/helpers/seo-helper";
+
+export async function generateMetadata() {
+  return SeoHelper({
+    title: "Most important title on the page",
+    description: "Lorem ipsum dolor sit amet",
+    url: "/",
+    image: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+  });
+}
 
 export default function Home() {
   return (
     <>
-      <SEO
-        title="Most important title on the page"
-        description="Lorem ipsum dolor sit amet"
-        url="/"
-        image="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
-      ></SEO>
       <Container color="secondary" as="section">
         <Box
           component="div"

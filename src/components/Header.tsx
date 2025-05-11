@@ -22,6 +22,7 @@ const StyledCompanyName = styled(Link)`
   font-weight: bold;
   margin: 0;
   text-decoration: none;
+  color: #000;
 
   &:visited {
     color: #000;

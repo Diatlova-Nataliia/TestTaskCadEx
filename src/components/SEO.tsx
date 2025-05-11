@@ -32,7 +32,7 @@ export default function SEO({
   };
 
   return (
-    <Head>
+    <Head key="seo">
       {/* Basic SEO */}
       <title>{title}</title>
       <meta name="description" content={description} />
