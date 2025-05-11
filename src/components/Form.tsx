@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
 import FormInput from "@/components/FormInput";
-import { StyledButton } from "@/components/StyledButton";
+import { Button } from "@/components/Button";
 import React from "react";
 
 export type FormField = {
@@ -44,9 +44,9 @@ const Form: React.FC<FormProps> = ({ onSubmit, formSchema, onChange }) => {
             />
           </Box>
         ))}
-        <StyledButton type="submit" sx={{ width: "100%" }}>
+        <Button type="submit" sx={{ width: "100%" }}>
           Submit
-        </StyledButton>
+        </Button>
       </form>
     </>
   );

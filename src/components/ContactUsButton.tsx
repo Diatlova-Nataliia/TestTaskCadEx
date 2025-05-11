@@ -1,10 +1,10 @@
-import { StyledButton } from "@/components/StyledButton";
+import { Button } from "@/components/Button";
 import Link from "next/link";
 
 export const ContactUsButton = () => {
   return (
-    <StyledButton component={Link} href="/contact-us" variant="contained">
+    <Button component={Link} href="/contact-us" variant="contained">
       Contact us
-    </StyledButton>
+    </Button>
   );
 };

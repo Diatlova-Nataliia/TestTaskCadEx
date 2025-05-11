@@ -11,7 +11,7 @@ interface SEOOptions {
 
 const HOST = "https://main.d21uxun1hn1y66.amplifyapp.com";
 
-export async function SeoHelper({
+export async function seoHelper({
   title,
   description,
   url,

@@ -10,7 +10,7 @@ export interface StyledInputProps {
   fieldType?: FormField["type"];
 }
 
-export const StyledInput = styled.textarea<StyledInputProps>`
+export const Input = styled.textarea<StyledInputProps>`
   padding: 11px 0 11px 16px;
   border: 3px solid transparent;
   background-origin: border-box;

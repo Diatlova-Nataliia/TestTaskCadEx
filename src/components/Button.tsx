@@ -1,9 +1,9 @@
 "use client";
 
 import { styled as muiStyled } from "@mui/material/styles";
-import Button, { ButtonProps } from "@mui/material/Button";
+import MuiButton, { ButtonProps } from "@mui/material/Button";
 
-export const StyledButton = muiStyled(Button)<ButtonProps>(() => ({
+export const Button = muiStyled(MuiButton)<ButtonProps>(() => ({
   padding: "5px 47px",
   borderRadius: "8px",
   fontSize: "1.1rem",

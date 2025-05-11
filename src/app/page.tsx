@@ -1,13 +1,13 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Card from "@/components/CardProps";
+import Article from "@/components/Article";
 import Container from "@/components/Container";
 import { ContactUsButton } from "@/components/ContactUsButton";
 import Video from "@/components/Video";
-import { SeoHelper } from "@/helpers/seo-helper";
+import { seoHelper } from "@/helpers/seo-helper";
 
 export async function generateMetadata() {
-  return SeoHelper({
+  return seoHelper({
     title: "Most important title on the page",
     description: "Lorem ipsum dolor sit amet",
     url: "/",
@@ -120,7 +120,7 @@ export default function Home() {
           }}
         >
           {Array.from({ length: 6 }, (_, index) => (
-            <Card
+            <Article
               textColor="#757575"
               titleFontSize="1.5rem"
               textFontSize="1rem"

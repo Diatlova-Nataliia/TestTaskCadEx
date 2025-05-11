@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Box } from "@mui/system";
-import { StyledInput } from "@/components/StyledInput";
+import { Input } from "@/components/Input";
 import { FormField } from "@/components/Form";
 
 interface FormInputProps {
@@ -22,7 +22,7 @@ const FormInput: React.FC<FormInputProps> = ({
       <Box component="div" paddingBottom={labelPadding}>
         <label htmlFor={name}>{field.label}</label>
       </Box>
-      <StyledInput
+      <Input
         as={field.type === "textarea" ? "textarea" : "input"}
         fieldType={field.type}
         placeholder={field.placeholder}

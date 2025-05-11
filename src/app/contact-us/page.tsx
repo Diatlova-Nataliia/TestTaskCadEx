@@ -1,9 +1,9 @@
 import React from "react";
-import { SeoHelper } from "@/helpers/seo-helper";
+import { seoHelper } from "@/helpers/seo-helper";
 import ContactUsForm from "@/components/ContactUsForm";
 
 export async function generateMetadata() {
-  return SeoHelper({
+  return seoHelper({
     title: "Contact us",
     description: "You are adopted",
     url: "/contact-us",

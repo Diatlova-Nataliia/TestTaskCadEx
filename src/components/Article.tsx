@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import React from "react";
 import { Box } from "@mui/system";
 
-interface CardProps {
+interface ArticleProps {
   title: string;
   text: string;
   fontWeight?: string;
@@ -11,7 +11,7 @@ interface CardProps {
   textColor?: string;
 }
 
-const Card: React.FC<CardProps> = ({
+const Article: React.FC<ArticleProps> = ({
   title,
   text,
   fontWeight,
@@ -22,6 +22,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <>
       <Box
+        component="article"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -43,4 +44,4 @@ const Card: React.FC<CardProps> = ({
   );
 };
 
-export default Card;
+export default Article;
