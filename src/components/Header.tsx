@@ -4,6 +4,7 @@ import { StyledButton } from "@/components/StyledButton";
 import styled from "styled-components";
 import Container from "@/components/Container";
 import { ContactUsButton } from "@/components/ContactUsButton";
+import Link from "next/link";
 
 interface HeaderProps {
   href?: string;
@@ -17,17 +18,23 @@ const StyledHeader = styled.div`
   margin: 0;
 `;
 
-const StyledCompanyName = styled.p`
+const StyledCompanyName = styled(Link)`
   font-size: 1.3rem;
   font-weight: bold;
   margin: 0;
+  text-decoration: none;
+
+  &:visited {
+    color: #000;
+  }
 `;
 
 const Header: React.FC<HeaderProps> = () => {
   return (
     <Container color="primary" as="header">
       <StyledHeader>
-        <StyledCompanyName>Some Company</StyledCompanyName>
+        <StyledCompanyName href="/">Some Company</StyledCompanyName>
+
         <ContactUsButton></ContactUsButton>
       </StyledHeader>
     </Container>
